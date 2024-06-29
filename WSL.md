@@ -60,9 +60,9 @@ puedes listar la lista completa de instancias wsl en tu sistema operativo ademá
 
 ### Instalar
 <details>
-  <sumary>
+  <sumanry>
     Instalar mediante interfaz
-  </sumary>  
+  </summary>  
   Podemos encontrar esta opción desde el panel de control, pero es más fácil de acceder directamente desde las busquedas
   
   `Activar o desactivar las características de windows`
@@ -74,5 +74,35 @@ puedes listar la lista completa de instancias wsl en tu sistema operativo ademá
   
   ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/d547c309-abe3-45af-8649-93fe34cb55ee)
 
+</details>
+
+<details>
+  <summary>
+    Instalar una Distribución en específico
+  </summary>
+  usando el siguiente comando, se pueden listar las distribuciones que pueden ser instaladas mediante WSL, de las cuales puedes elegir la que requieras instalar
+  para este caso usaremos la `Ubuntu 24.04 lts`
   
+```
+wsl --list --online
+```
+  
+  ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/525fe69e-789e-4abe-824b-2c6db2d5f037)
+
+```
+wsl --install <distribución> 
+```
+esperamos a que se termine la descarga y la instalación
+
+![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/ec08baea-523c-4410-80b2-b34f201b3844)
+
+nos pedirá un usuario y una contraseña
+
+![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/ae917113-7999-4bde-beb5-9ab063ac157e)
+
+y finalmente entrará directo hasta la consola de comandos de nuestro linux como se ve en la pantalla de a continuación
+
+![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/16ccc6fc-da01-4e79-b6e0-f1f5c5e0923a)
+
+de la cual podemos salir simplemente tecleando el comando `exit`
 </details>
