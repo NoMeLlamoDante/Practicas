@@ -104,5 +104,13 @@ y finalmente entrará directo hasta la consola de comandos de nuestro linux como
 
 ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/16ccc6fc-da01-4e79-b6e0-f1f5c5e0923a)
 
-de la cual podemos salir simplemente tecleando el comando `exit`
+podemos comprobar con el comando `pwd` podemos ver la ruta en la que nos encontramos dentro de ubuntu, además el siguiente comando nos servirá para ver los datos de la distribución
+
+```
+lsb_release -a
+
+```
+![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/5ba58bbf-7805-426c-a5d7-9eb17e82b735)
+
+podemos salir simplemente tecleando el comando `exit`
 </details>
