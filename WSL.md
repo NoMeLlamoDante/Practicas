@@ -114,3 +114,14 @@ lsb_release -a
 
 podemos salir simplemente tecleando el comando `exit`
 </details>
+
+## Ejecutar Comandos desde terminal
+Si quieres ejecutar un comando en una distro de tu WSL directamente desde la terminal, puedes hacerlo usando el siguiente comando
+
+```
+wsl -d <nombre distro> --excec <comando>
+```
+
+en este caso, ejecutamos `neofetch` (el cual debe de instalarse) en nuestra distribución de `Ubuntu 24.04 lts`
+para ver las características de nuestra maquina virtual
+
