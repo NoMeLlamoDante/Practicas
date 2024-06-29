@@ -60,7 +60,7 @@ puedes listar la lista completa de instancias wsl en tu sistema operativo ademá
 
 ### Instalar
 <details>
-  <sumanry>
+  <summary>
     Instalar mediante interfaz
   </summary>  
   Podemos encontrar esta opción desde el panel de control, pero es más fácil de acceder directamente desde las busquedas
@@ -115,21 +115,55 @@ lsb_release -a
 podemos salir simplemente tecleando el comando `exit`
 </details>
 
-## Ejecutar Comandos desde terminal PowerShell
-Si quieres ejecutar un comando en una distro de tu WSL directamente desde la terminal, puedes hacerlo usando el siguiente comando
+### Comandos
 
-```
-wsl -d <nombre distro> --excec <comando>
-```
+<details>
+  <summary>
+    Ejecutar Comandos desde terminal PowerShell    
+  </summary>
 
-en este caso, ejecutamos `neofetch` (el cual debe de instalarse) en nuestra distribución de `Ubuntu 24.04 lts`
-para ver las características de nuestra maquina virtual
+  Si quieres ejecutar un comando en una distro de tu WSL directamente desde la terminal, puedes hacerlo usando el siguiente comando
+  
+  ```
+  wsl -d <nombre distro> --excec <comando>
+  ```
+  
+  en este caso, ejecutamos `neofetch` (el cual debe de instalarse) en nuestra distribución de `Ubuntu 24.04 lts`
+  para ver las características de nuestra maquina virtual
+  
+  También podemos ejecutar comandos compuestos por 1, 2 o más comandos 
+  mediante la siguiente estructura, para añadir comandos extra, se puede agregar un `;` o un `&&` antes de las comillas de cierre `"`
+  
+  ```
+  wsl -d <nombre distro> -e bash -c "<comando 1> && <comando 2>"
+  ```
+  ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/112aebed-85a5-48c1-b38d-4971442c5ac0)
 
-También podemos ejecutar comandos compuestos por 1, 2 o más comandos 
-mediante la siguiente estructura, para añadir comandos extra, se puede agregar un `;` o un `&&` antes de las comillas de cierre `"`
+</details>
 
-```
-wsl -d <nombre distro> -e bash -c "<comando 1> && <comando 2>"
-```
-![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/112aebed-85a5-48c1-b38d-4971442c5ac0)
+<details>
+  <summary>
+   Detener las instancias 
+  </summary>  
+  
+  una manera de hacer que nuestras instancias se detengan es directamente pagandolas mediante la terminal, usando el siguiente comando:
+  
+  ```
+  wsl --shutdown
+  ```
+  el cual se encarga de apagar todas las instancias que tengamos en ejecución en ese momento
+  ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/02b2ef40-7c87-41f1-8e6d-dcfd79489656)
+</details>
+
+
+### Establecer las características de la instancia
+<details>
+  Podemos especificar las características que queremos para una determinada instancia de WSL, o hacerlo de manera global, en este caso, lo haremos de manera global, entrando al archivo de configuración que se encuentra en la ruta `C:\Users\<usuario>`, en esta ruta debemos buscar el archivo denominado `.wslconfig`, en caso de que éste no exista, podemos crearlo para editarlo de la manera que nosotros querramos, en este caso limitamos la cantidad de `memoria ram a 4GB` y la cantidad de `procesadores virtuales a 2`
+  
+  ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/cc14530e-6d99-4838-a398-e77f70bb5caf)
+  
+  ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/78a7a128-766d-4e45-bf98-4d910dc2e057)
+  
+  si quieres ver la información comoleta para editar este archivo de configuración puedes encontarla [aqui](https://learn.microsoft.com/es-es/windows/wsl/wsl-config#wslconfig)
+</details>
 
