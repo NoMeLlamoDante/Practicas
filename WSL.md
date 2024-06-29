@@ -115,7 +115,7 @@ lsb_release -a
 podemos salir simplemente tecleando el comando `exit`
 </details>
 
-## Ejecutar Comandos desde terminal
+## Ejecutar Comandos desde terminal PowerShell
 Si quieres ejecutar un comando en una distro de tu WSL directamente desde la terminal, puedes hacerlo usando el siguiente comando
 
 ```
@@ -124,4 +124,12 @@ wsl -d <nombre distro> --excec <comando>
 
 en este caso, ejecutamos `neofetch` (el cual debe de instalarse) en nuestra distribución de `Ubuntu 24.04 lts`
 para ver las características de nuestra maquina virtual
+
+También podemos ejecutar comandos compuestos por 1, 2 o más comandos 
+mediante la siguiente estructura, para añadir comandos extra, se puede agregar un `;` o un `&&` antes de las comillas de cierre `"`
+
+```
+wsl -d <nombre distro> -e bash -c "<comando 1> && <comando 2>"
+```
+![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/112aebed-85a5-48c1-b38d-4971442c5ac0)
 
