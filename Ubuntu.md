@@ -138,3 +138,99 @@ y nos permite ver todos los archivos que tenemos een la dirección donde nos enc
 
 
 </details>
+
+<details>
+  <summary>
+    git
+  </summary>
+  git es un sistema de manejo de versiones que viene instalado por defecto en la mayoría de las distros
+  en caso coontrario, puede instalarse usando el administrador de paquetes
+
+```
+sudo apt install git
+```
+en este momento podemos crear el archivo `-gitconfig` en el directorio home, para guardar las configuraciones por defecto asociadas a git
+
+```
+[user]
+name = <nombre usuario>
+email = <correo electronico>
+
+[credential]
+helper= store
+
+[core]
+editor = vim
+autocrlf = input
+
+[init]
+defaultBranch = mai
+```
+</details>
+
+
+<details>
+  <summary>
+    zsh
+  </summary>
+  Zsh es un interprete de comandos que contiene muchas mejoras con respecto al interprete por defecto
+
+  para instalarlo hay que ingresar el siguiente comando
+
+```
+sudo apt install zsh
+```
+
+junto con él se puede instalar oh my Zsh, para cambiar la interfaz de la termminal, para lo cual se requiere la instalación de curl
+
+```
+sudo apt install curl
+```
+
+y en la página de [oh-my-zsh](https://ohmyz.sh/#install), podemos encontrar la formma de instalación que está a continuación
+
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+cuando nos pregunte si queremos aceptar que zsh sea nuestra terminal por defecto, aceptamos usando `y`
+
+![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/03f71d13-9d96-4d9c-a00d-f8ce2194c67e)
+
+
+instalamos algunos plugins de zsh como los siguientes
+
+- [Zsh synta highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+
+```
+# to install
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+
+# to enable
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
+- [Zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosugg
+estions
+```
+
+-[fzf tab](https://github.com/junegunn/fzf?tab=readme-ov-file#linux-packages)
+
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+marcamos `y` a las opciones para activarlo por defecto
+
+para activar los plugins, tenemos que hacerlo desde el archivo de configuración, el cual se puede abrir ejecutando el comando siguiente y listándolos en la linea de plugins.
+```
+vim .zshrc
+```
+agregamos los plugins necesarios en la lista, el fzftab y el zsh-syntax-highlighting se agregan ejecutan por defecto con la instalación
+![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/6b26027d-fb85-488e-adbf-568674b16828)
+
+
+</details>
