@@ -203,11 +203,8 @@ instalamos algunos plugins de zsh como los siguientes
 
 ```
 # to install
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-
-# to enable
-source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+cd .oh-my-zsh/plugins/ && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+"/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc && source /.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ```
 
 - [Zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md)
@@ -233,4 +230,35 @@ agregamos los plugins necesarios en la lista, el fzftab y el zsh-syntax-highligh
 ![image](https://github.com/NoMeLlamoDante/Practicas/assets/28581163/6b26027d-fb85-488e-adbf-568674b16828)
 
 
+</details>
+
+<details>
+  <summary>
+    LSD (LSDeluxe)
+  </summary>
+
+  podemos usar LSD para colocar iconos junto a los nombres de los archivos
+  para ello instalamos el paquete directamente siguiendo las [configuraciones oficiales](https://github.com/lsd-rs/lsd?tab=readme-ov-file#from-binaries) usando el siguiente comando
+
+```
+apt install lsd
+```
+</details>
+
+<details>
+  <summary>
+    python & pip
+  </summary>
+  python3 usualmente se instala por defecto en ubuntu, podemos corroborarlo usando el comando
+  
+```  
+python3 --version
+```
+con lo cual nos aparecerá la versión de python que se encuentra actualmente instalada
+por otro lado pip en ocasiones no está instalado, y al ser el manejador de python por defecto, debe ser istalado, lo cual se hace usando el siguiente comando
+
+```
+ apt install python3-pip
+```
+tras lo cual podremos usar `pip -V` para verificar la versión que tenemos instalada
 </details>
